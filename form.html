@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz z Bootstrapem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+    <form id="form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">Imię</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Nazwisko</label>
+                    <input type="text" class="form-control" id="surname" name="surname">
+                </div>
+                <div class="form-group">
+                    <label for="date">Data urodzenia</label>
+                    <input type="date" class="form-control" id="date" name="dob">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Płeć</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="1">Mężczyzna</option>
+                        <option value="0">Kobieta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="children">Ilość dzieci</label>
+                    <input type="number" class="form-control" id="children" name="children">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="shoe_size">Rozmiar buta</label>
+                    <input type="number" class="form-control" id="shoe_size" name="shoe_size">
+                </div>
+                <div class="form-group">
+                    <label for="level">Poziom w Pokemon Go</label>
+                    <input type="number" class="form-control" id="level" name="level">
+                </div>
+                <div class="form-group">
+                    <label for="color">Wybór koloru</label>
+                    <select class="form-control" id="color" name="color">
+                        <option value="#000">Czarny</option>
+                        <option value="#fff">Biały</option>
+                        <option value="#f00">Czerwony</option>
+                        <option value="#0f0">Zielony</option>
+                        <option value="#00f">Niebieski</option>
+                        <option value="#ff0">Żółty</option>
+                        <option value="#666">Szary</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button name="bt" type="button" onclick="funkcja()" class="btn btn-primary">Wyślij</button>
+                </div>
+            </div>
+            <div id="wypluwacz">tu będzie błąd</div>
+            <table class="table" id="tabela">
+                <tbody>
+                <tr>
+                    <td>zmienna</td>
+                    <td>wartość</td>
+                    <td>opcja</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+<script>
+    function funkcja() {
+        var imie = document.getElementById("name").value;
+        var nazwisko = document.getElementById("surname").value;
+        var data = document.getElementById("date").value;
+        var plec = document.getElementById("gender").value;
+        var dzieci = document.getElementById("children").value;
+        var rozmiar = document.getElementById("shoe_size").value;
+        var poziom = document.getElementById("level").value;
+        var kolor = document.getElementById("color").value;
+        var wypluwacz = document.getElementById("wypluwacz");
+
+        console.log("Naciśnięto przycisk");
+
+        wypluwacz.innerHTML = "Witaj, " + imie + " " + nazwisko + "!";
+    }
+</script>
+
+</body>
+</html>
