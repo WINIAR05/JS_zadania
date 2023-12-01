@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Code</title>
+</head>
+<body>
+  <!-- Fragment 1 -->
+  <!-- 
+  <script>
+    const stala = "Michal";
+    console.log(stala);
+    // poniższa linia spowoduje błąd, ponieważ próbujemy przypisać nową wartość stałej
+    // stala = "Kopytko";
+    // console.log(stala);
+  </script>
+  -->
+
+  <!-- Fragment 2 -->
+  <!-- 
+  <script>
+    zmienna = "kopytko1";
+    console.log(zmienna);
+    zmienna = "kopytko2";
+    console.log(zmienna);
+    funkcja();
+
+    function funkcja() {
+      let zmienna = "kopytko1";
+      console.log("funkcja");
+    }
+    // poniższa linia spowoduje błąd, ponieważ zmienna nie została jeszcze zadeklarowana
+    // console.log(zmienna);
+    var zmienna; // zmienna została zadeklarowana, ale jej wartość nadal jest undefined
+    console.log(zmienna);
+  </script>
+  -->
+
+  <!-- Fragment 3 -->
+  <script>
+    document.body.innerHTML += "Podaj imię: <br>"
+    document.body.innerHTML += '<input type="text" id="name" name="name"><br>'
+    document.body.innerHTML += "Podaj nazwisko: <br>"
+    document.body.innerHTML += '<input type="text" id="surname" name="surname"><br>'
+    document.body.innerHTML += "Podaj datę urodzenia: <br>"
+    document.body.innerHTML += '<input type="date" id="data" name="data"><br>'
+    document.body.innerHTML += '<br><button onclick="funkcja()">przycisk</button><br>'
+    document.body.innerHTML += '<div id="wypluwacz">tu pluje</div>'
+
+    function funkcja(){
+      name = document.getElementById("name").value
+      surname = document.getElementById("surname").value
+      data = document.getElementById("data").value
+      wypluwacz = document.getElementById("wypluwacz")
+      wypluwacz.innerHTML = name + "<br>" + surname + "<br>" + data + "<br>"
+    }
+  </script>
+
+  <!-- Fragment 4 -->
+  <script>
+    console.log(1===1)
+    console.log(1==1)
+  </script>
+</body>
+</html>
