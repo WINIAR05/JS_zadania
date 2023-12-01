@@ -43,8 +43,6 @@ const obliczPunkty = async () => {
     console.error('Błąd podczas obliczania punktów:', error);
   }
 };
-
-// Wywołanie funkcji do pobrania danych i wypełnienia listy
 fetchData("https://imiki.pl/dane.json")
   .then((data) => fillPrzewinieniaList(data))
   .catch((error) => console.error('Błąd podczas pobierania danych:', error));
